@@ -10,5 +10,6 @@ class Company extends Model
     use HasFactory;
 
     // Enable Mass Assignment
-    protected $fillable = ['name', 'first_name', 'last_name', 'email', 'address'];
+    protected $fillable = ['name', 'address', 'website', 'email'];
 }
+
