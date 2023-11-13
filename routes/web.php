@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// If the user goes to contacts
+// We want to display the message "ALL CONTACTS"
+
+Route::get('/contacts', function(){
+    return "<h1>All Contacts</h1>";
+});
+
+Route::get('/contacts/create', function(){
+    return "<h1>Add new Contacts</h1>";
+});
+
+Route::get('/contacts/{id}', function($id){
+    return App\Model\Contact::find($id);
+});
