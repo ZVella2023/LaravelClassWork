@@ -27,4 +27,4 @@ Route::get('/contacts/create', function(){
 
 Route::get('/contacts/{id}', function($id){
     return App\Models\Contact::find($id);
-})->name('contacts.show');
+})->name('contacts');
