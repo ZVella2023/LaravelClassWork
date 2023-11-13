@@ -17,19 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// If the user goes to contacts
-// We want to display the message "ALL CONTACTS"
-
 Route::get('/contacts', function(){
     return "<h1>All Contacts</h1>";
-});
+})->name('contacts.index');
 
 Route::get('/contacts/create', function(){
     return "<h1>Add new Contacts</h1>";
-});
-
-// /Contacts/2 -> Database to return the details of the contact with id 2
+})->name('contacts.create');
 
 Route::get('/contacts/{id}', function($id){
     return App\Models\Contact::find($id);
-});
+})->name('contacts.show');
