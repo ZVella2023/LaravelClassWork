@@ -28,6 +28,8 @@ Route::get('/contacts/create', function(){
     return "<h1>Add new Contacts</h1>";
 });
 
+// /Contacts/2 -> Database to return the details of the contact with id 2
+
 Route::get('/contacts/{id}', function($id){
-    return App\Model\Contact::find($id);
+    return App\Models\Contact::find($id);
 });
