@@ -43,6 +43,7 @@ class ContactController extends Controller
             'company_id'=>'required|exists:companies,id'
 
         ]);
+        
         dd($request->all());
     }
 }
